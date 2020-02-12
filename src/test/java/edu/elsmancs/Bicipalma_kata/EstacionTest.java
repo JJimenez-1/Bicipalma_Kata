@@ -34,6 +34,9 @@ public class EstacionTest {
     }
 
     @Test
-
+    public void comprobarAnclajesLibresTest() {
+        Estacion estacion = new Estacion(4,"Manacor", 5);
+        assertEquals(5, estacion.anclajesLibres());
+    }
 
 }

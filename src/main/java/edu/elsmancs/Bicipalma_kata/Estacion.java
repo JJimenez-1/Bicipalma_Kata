@@ -4,11 +4,13 @@ public class Estacion {
     private final int id;
     private final String direccion;
     private final int numeroAnclajes;
+    private Bicicleta[] anclajes = null;
 
     public Estacion(int id, String direccion, int anclajes) {
         this.id = id;
         this.direccion = direccion;
         this.numeroAnclajes = anclajes;
+        private Bicicleta[] anclajes = null;
     }
 
     public int getId() {
@@ -23,5 +25,9 @@ public class Estacion {
         return numeroAnclajes;
     }
 
-
+    public void consultarEstacion() {
+        System.out.println("id: " + getId());
+        System.out.println("direccion:" + getDireccion());
+        System.out.println("Numero Anclajes:" + getNumeroAnclajes());
+    }
 }

@@ -25,5 +25,15 @@ public class EstacionTest {
         assertEquals(12, estacion.getNumeroAnclajes());
     }
 
+    @Test
+    public void consultarEstacionTest() {
+        Estacion estacion = new Estacion(4, "Virgen Del Pilar 123", 10);
+        assertEquals(4, estacion.getId());
+        assertEquals("Virgen Del Pilar 123", estacion.getDireccion());
+        assertEquals(10, estacion.getNumeroAnclajes());
+    }
+
+    @Test
+
 
 }

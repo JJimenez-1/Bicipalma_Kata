@@ -39,13 +39,6 @@ public class EstacionTest {
         assertEquals(5, estacion.anclajesLibres());
     }
 
-    @Test
-    public void anclarBiciletaTest() {
-        Estacion estacion = new Estacion (9, "Manacor", 5);
-        Bicicleta bici = new Bicicleta(4);
-        assertEquals(2,estacion.anclarBicicleta());
-    }
 
-    @Test
 
 }

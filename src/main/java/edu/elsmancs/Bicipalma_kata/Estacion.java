@@ -46,11 +46,18 @@ public class Estacion {
 
         int posicion = 0;
         int numeroAnclaje = posicion + 1;
-        for (Bicicleta anclaje: this.anclajes) {
-            while (anclaje == null) {
-                this.anclajes[posicion] = bicicleta;
-                mostrarAnclaje(bicicleta, numeroAnclaje);
-            }
+        boolean anclajeOcupado = false;
+
+        while(anclajeOcupado != true) {
+                if (this.anclajes[posicion] == null ) {
+                    this.anclajes[posicion] = bicicleta;
+                    mostrarAnclaje(bicicleta, numeroAnclaje);
+                    anclajeOcupado = true;
+                }
+                else {
+                    posicion++;
+                    numeroAnclaje++;
+                }
         }
     }
 
@@ -63,3 +70,7 @@ public class Estacion {
     }
 
 }
+
+
+
+

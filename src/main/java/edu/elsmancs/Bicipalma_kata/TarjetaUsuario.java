@@ -7,7 +7,7 @@ public class TarjetaUsuario {
 
     public TarjetaUsuario(int id, Boolean activada){
         this.id = id;
-        this.setActivada(activada);
+        this.activada = activada;
     }
 
     public Boolean getActivada() {
@@ -15,5 +15,13 @@ public class TarjetaUsuario {
     }
     public void setActivada(Boolean activada) {
         this.activada = activada;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

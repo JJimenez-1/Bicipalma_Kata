@@ -7,7 +7,7 @@ public class BicicletaTest {
 
     @Test
     public void getIdTest() {
-        Bicicleta bici = new Bicicleta(3);
+        Bicicleta bici = new Bicicleta(323);
         assertEquals(3, bici.getId());
     }
 }

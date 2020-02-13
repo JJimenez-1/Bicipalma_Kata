@@ -39,6 +39,10 @@ public class EstacionTest {
         assertEquals(5, estacion.anclajesLibres());
     }
 
-
+    @Test
+    public void comprobarLeerTarjetaUsuario() {
+        TarjetaUsuario tarjeta = new TarjetaUsuario(345, true);
+        assertEquals(true, tarjeta.getActivada());
+    }
 
 }

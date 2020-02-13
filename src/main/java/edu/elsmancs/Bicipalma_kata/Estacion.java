@@ -46,7 +46,7 @@ public class Estacion {
 
     public void anclarBicicleta(Bicicleta bicicleta) {
 
-        int posicion = 0;
+        int posicion = generarAnclaje();
         int numeroAnclaje = posicion + 1;
         boolean anclajeOcupado = false;
 
@@ -60,6 +60,22 @@ public class Estacion {
                     posicion++;
                     numeroAnclaje++;
                 }
+        }
+    }
+
+    public void consultarAnclajes() {
+        int posicion = generarAnclaje();
+        int numeroAnclaje = posicion + 1;
+
+        for (Bicicleta bicicleta : this.anclajes) {
+            if (bicicleta == null) {
+                System.out.println("Anclaje " + numeroAnclaje + " libre");
+            }
+            else {
+                System.out.println("Anclaje " + numeroAnclaje + this.anclajes[posicion].getId());
+            }
+            posicion++;
+            numeroAnclaje++;
         }
     }
 

@@ -40,7 +40,7 @@ public class EstacionTest {
     }
 
     @Test
-    public void comprobarLeerTarjetaUsuario() {
+    public void LeerTarjetaUsuarioTest() {
         TarjetaUsuario tarjeta = new TarjetaUsuario(345, true);
         assertEquals(true, tarjeta.getActivada());
     }

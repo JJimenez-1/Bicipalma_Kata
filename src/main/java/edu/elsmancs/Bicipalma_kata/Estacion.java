@@ -63,6 +63,31 @@ public class Estacion {
         }
     }
 
+    public void retirarBicicleta(TarjetaUsuario tarjetaUsuario) {
+        int posicion = generarAnclaje();
+        int numeroAnclaje = posicion + 1;
+
+        if (leerTarjetaUsuario(tarjetaUsuario)){
+            boolean biciRetirada = tarjetaUsuario.getActivada();
+
+            while(biciRetirada == false){
+
+                if (this.anclajes[posicion] != null){
+                    mostrarBicicleta(this.anclajes[posicion], numeroAnclaje);
+                    this.anclajes[posicion] = null;
+                    biciRetirada = true;
+                }
+                else{
+                    posicion++;
+                    numeroAnclaje++;
+                }
+         }
+        }
+        else {
+            System.out.println("Tarjeta inactiva: " + tarjetaUsuario.getId());
+        }
+    }
+
     public Boolean leerTarjetaUsuario(TarjetaUsuario tarjetaUsuario){
         return tarjetaUsuario.getActivada();
     }

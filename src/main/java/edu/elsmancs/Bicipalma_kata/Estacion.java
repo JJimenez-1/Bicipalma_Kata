@@ -1,5 +1,7 @@
 package edu.elsmancs.Bicipalma_kata;
 
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Estacion {
     private final int id;
     private final String direccion;
@@ -73,6 +75,10 @@ public class Estacion {
         System.out.println("Bicicleta desanclada: " + bicicleta.getId() + " del anclaje: " + numeroAnclaje);
     }
 
+    public int generarAnclaje(){
+        Integer entero = ThreadLocalRandom.current().nextInt(0,this.anclajes.length);
+        return entero;
+    }
 }
 
 

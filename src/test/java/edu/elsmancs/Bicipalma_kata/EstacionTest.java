@@ -45,4 +45,11 @@ public class EstacionTest {
         assertEquals(true, tarjeta.getActivada());
     }
 
+    /**
+    @Test
+    public void comprobarGenerarAnclaje() {
+        Integer numero = new Integer ();
+    }
+    */
+
 }
